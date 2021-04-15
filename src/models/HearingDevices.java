@@ -16,7 +16,7 @@ public class HearingDevices {
         setHearingLevelCompatible(hearingLevelCompatible);
     }
     public String getType() {
-        return powerLevel;
+        return type;
     }
 
     public static List<String> getValidType()

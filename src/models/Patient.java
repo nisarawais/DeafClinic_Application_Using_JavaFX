@@ -15,7 +15,7 @@ public class Patient {
 
 
 
-    public Patient(String firstName, String lastName, String streetAddress, String city, String state, int zipCode, String leftHearingLevel, String rightHearingLevel, LocalDate birthday, ArrayList<String> leftHearingDevice, ArrayList<String> rightHearingDevice ) {
+    public Patient(String firstName, String lastName, String streetAddress, String city, String state, int zipCode, String leftHearingLevel, String rightHearingLevel, LocalDate birthday ) {
         setFirstName(firstName);
         setLastName(lastName);
         setStreetAddress(streetAddress);
