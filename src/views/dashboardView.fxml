@@ -39,7 +39,7 @@
                            </VBox.margin>
                         </Label>
                         <ListView fx:id="patientListView" />
-                        <Button mnemonicParsing="false" text="Add New Patient">
+                        <Button fx:id="addNewPatientButton" mnemonicParsing="false" onAction="#addNewPatientButtonPushed" text="Add New Patient">
                            <VBox.margin>
                               <Insets bottom="5.0" top="5.0" />
                            </VBox.margin>
@@ -54,7 +54,7 @@
                            </VBox.margin>
                         </Label>
                         <ListView fx:id="hearingDeviceListView" />
-                        <Button mnemonicParsing="false" text="Add New Hearing Device">
+                        <Button mnemonicParsing="false" onAction="#addNewHearingDeviceButtonPushed" text="Add New Hearing Device">
                            <VBox.margin>
                               <Insets bottom="5.0" top="5.0" />
                            </VBox.margin>

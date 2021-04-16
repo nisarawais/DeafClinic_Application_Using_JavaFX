@@ -7,48 +7,39 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import models.HearingDevices;
 import models.Patient;
 
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-public class CreatePatientViewController implements Initializable {
+public class CreateHearingDeviceViewController implements Initializable {
 
     @FXML
-    private TextField firstNameTextField;
+    private TextField typeTextField;
 
     @FXML
-    private TextField lastNameTextField;
+    private TextField companyTextField;
 
     @FXML
-    private TextField streetAddressTextField;
+    private TextField modelTextField;
 
     @FXML
-    private TextField cityTextField;
+    private TextField versionTextField;
 
     @FXML
-    private TextField stateTextField;
+    private TextField powerLevelTextField;
 
     @FXML
-    private TextField zipCodeTextField;
-
-    @FXML
-    private TextField leftHearingLevelTextField;
-
-    @FXML
-    private TextField rightHearingLevelTextField;
-
-    @FXML
-    private DatePicker birthday;
+    private TextField hearingLevelCompatibleTextField;
 
     @FXML
     private Label msg;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -56,18 +47,19 @@ public class CreatePatientViewController implements Initializable {
     }
 
     @FXML
-    private void createNewPatient()
+    private void createNewHearingDevice()
     {
-        Patient newPatient;
+        HearingDevices newHearingDevice;
         try {
-            newPatient = new Patient(firstNameTextField.getText(), lastNameTextField.getText(), streetAddressTextField.getText(), cityTextField.getText(), stateTextField.getText(), 10001, leftHearingLevelTextField.getText(), rightHearingLevelTextField.getText(), birthday.getValue());
-            msg.setText("New Patient: " + newPatient.toString());
+            newHearingDevice = new HearingDevices(typeTextField.getText(), companyTextField.getText(), modelTextField.getText(), versionTextField.getText(),powerLevelTextField.getText(),hearingLevelCompatibleTextField.getText());
+            msg.setText("New Hearing Device: " + newHearingDevice.toString());
         }
         catch(IllegalArgumentException e){
             msg.setText(e.getMessage());
-    }
+        }
 
     }
+
     @FXML
     private void goBack (ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../views/DashboardView.fxml"));
