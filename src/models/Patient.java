@@ -14,8 +14,7 @@ public class Patient {
     private ArrayList<HearingDevices> rightHearingDevice;
 
 
-
-    public Patient(String firstName, String lastName, String streetAddress, String city, String state, int zipCode, String leftHearingLevel, String rightHearingLevel, LocalDate birthday ) {
+    public Patient(String firstName, String lastName, String streetAddress, String city, String state, int zipCode, String leftHearingLevel, String rightHearingLevel, LocalDate birthday) {
         setFirstName(firstName);
         setLastName(lastName);
         setStreetAddress(streetAddress);
@@ -133,9 +132,6 @@ public class Patient {
     }
 
 
-    public void addLeftHearingDevice (HearingDevices lItem){ leftHearingDevice.add(lItem);}
-    public void addRightHearingDevice (HearingDevices rItem){ rightHearingDevice.add(rItem);}
-
     /**
      *
      * @return a patient's age
@@ -144,6 +140,6 @@ public class Patient {
 
     public String toString()
     {
-        return String.format("%s %s age: %d years", firstName, lastName, getAge());
+        return String.format("%s %s; Age: %s years old; Left Ear: %s; Right Ear: %s ", firstName, lastName,getAge(), leftHearingLevel,rightHearingLevel);
     }
 }

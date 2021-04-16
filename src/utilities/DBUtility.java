@@ -20,12 +20,12 @@ public class DBUtility {
     }
     public static ArrayList<HearingDevices> getHearingDevicesFromDB(){
         ArrayList<HearingDevices> hearingDevices = new ArrayList<>();
-        hearingDevices.add(new HearingDevices("Cochlear Implant","Cochlear","Nucleus","7","NA","severe-profound"));
+        hearingDevices.add(new HearingDevices("Cochlear Implant","Cochlear","Nucleus","7","","severe-profound"));
         hearingDevices.add(new HearingDevices("Hearing Aid","Phonak","Naida","Paradise","U","severe-profound"));
         hearingDevices.add(new HearingDevices("Hearing Aid","Phonak","Audeo","Paradise","P","mild-profound"));
         hearingDevices.add(new HearingDevices("Hearing Aid","Phonak","Sky","Marvel","M","mild-moderate"));
-        hearingDevices.add(new HearingDevices("Cochlear Implant","Advanced Bionics","Naida","Marvel","NA","severe-profound"));
-        hearingDevices.add(new HearingDevices("Hearing Aid","Oticon","Play","Opn","mild-severe","M"));
+        hearingDevices.add(new HearingDevices("Cochlear Implant","Advanced Bionics","Naida","Marvel","","severe-profound"));
+        hearingDevices.add(new HearingDevices("Hearing Aid","Oticon","Play","Opn","M","mild-severe"));
         return hearingDevices;
     }
 }

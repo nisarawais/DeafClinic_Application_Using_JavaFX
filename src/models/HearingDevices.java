@@ -60,10 +60,10 @@ public class HearingDevices {
     }
 
     public void setVersion(String version) {
-        if(version.length() > 2)
+        if(version.length() >= 1)
             this.version = version;
         else
-            throw new IllegalArgumentException("You need to type more than two characters long.");
+            throw new IllegalArgumentException("You need to type at least 1 character long.");
     }
 
     public String getPowerLevel() {
@@ -72,7 +72,7 @@ public class HearingDevices {
 
     public static List<String> getValidPowerLevel()
     {
-        return Arrays.asList("S", "M", "P", "U", "NA");
+        return Arrays.asList("S", "M", "P", "U", "");
     }
     public void setPowerLevel(String powerLevel) {
         powerLevel = powerLevel.toUpperCase();
@@ -98,6 +98,6 @@ public class HearingDevices {
             throw new IllegalArgumentException(hearingLevelCompatible + " was entered, valid types are: " + getValidHearingLevelCompatible());
     }
 
-    public String toString() { return String.format("Type: %s Name: %s %s %s %s Hearing Level Compatible: %s", powerLevel,company,version,version,powerLevel,hearingLevelCompatible);
+    public String toString() { return String.format("Type: %s; Name: %s %s %s %s; Hearing Level Compatible: %s", type,company,model,version,powerLevel,hearingLevelCompatible);
     }
 }
